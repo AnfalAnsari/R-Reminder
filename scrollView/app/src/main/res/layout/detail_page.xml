@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/event_poster"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/event_poster">
+
+        <TextView
+            android:id="@+id/event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/eventLocation"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/event_location"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="New LHC" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/eventDate"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/event_dateTime"
+                    android:paddingLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="New LHC" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/event_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et congue lectus. Nunc vehicula sem vitae tempus rutrum. Aenean vehicula, augue ut tincidunt mattis, neque felis mattis nulla, sit amet elementum felis tellus eu tellus. In ipsum dui, convallis vitae ultricies non, accumsan et est. Integer a metus libero. Phasellus eget consectetur dui, eu malesuada dolor. Nam vel dui id sem scelerisque fermentum sed sed massa. Quisque iaculis in sapien vitae malesuada. Phasellus mollis tincidunt lorem, ac egestas erat cursus a. Nunc lorem ligula, tempor ac consectetur eget, viverra sed tellus. Integer eu sagittis diam. Nulla facilisi. Vivamus id dignissim turpis, vel semper magna. In eu malesuada lectus. Donec ornare, magna a congue posuere, velit odio viverra est, ut maximus risus orci sed tortor. Proin tempus tempus felis, sed gravida est viverra eget." />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/remind_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/login_button"
+        android:onClick="RemindMe"
+        android:padding="10dp"
+        android:text="Remind Me"
+        android:textAllCaps="false"
+        android:textColor="@color/default_circle_indicator_fill_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
